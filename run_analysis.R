@@ -39,6 +39,6 @@ tidy_data <- aggregate(mean_std_data[, 3:ncol(mean_std_data)-1],
                                     by=list(subject = mean_std_data$subject, 
                                             label = mean_std_data$label),
                                     mean)
-dim(tidy_data)
+
 ## write the data for upload
 write.table(format(tidy_data, scientific=T), "tidy2.txt", row.names=F, col.names=F, quote=2)
